@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+Bienvenido f
+<p th:text="${mensaje}"></p>
+<br>
+<table border="1">
+    <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Email</th>
+        <th>Telefono</th>
+    </tr>
+    <tr th:each="persona : ${personas}">
+        <td th:text="${persona.nombre}"></td>
+        <td th:text="${persona.apellido}"></td>
+        <td th:text="${persona.email}"></td>
+        <td th:text="${persona.telefono}"></td>
+    </tr>
+</table>
+
+</body>
+
+</html>
